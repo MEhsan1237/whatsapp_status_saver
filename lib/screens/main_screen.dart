@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:status_saver_app/screens/video_screen.dart';
 
-import '../components/colorfunc/colorfunction.dart';
 import '../provider/provider_class.dart';
 import 'image_screen.dart';
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:status_saver_app/provider/get_viideo_image_provider.dart';
 
 import 'package:status_saver_app/provider/provider_class.dart';
 
@@ -8,10 +9,14 @@ import 'package:permission_handler/permission_handler.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (_) => ThemeProvider(),
-      child: const MyApp(),
+    MultiProvider(
+      providers: [
+       ChangeNotifierProvider(create:(_)=> ThemeProvider()),
+        ChangeNotifierProvider(create:(_)=> ApiProvider()),
+      ],
+      child:  const MyApp(),
     ),
+
   );
 }
 

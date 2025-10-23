@@ -37,7 +37,13 @@ dependencies:
   provider: ^6.1.5+1
   permission_handler: ^12.0.1
   animations: ^2.1.0
+  image_gallery_saver: '^2.0.3'
   video_thumbnail: ^0.5.6
+  fluttertoast: ^9.0.0
+  chewie: ^1.13.0
+  flutter_native_api: ^1.1.0
+  video_player: ^2.10.0
+
 
 
 dev_dependencies:

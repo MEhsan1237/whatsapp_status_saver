@@ -13,19 +13,25 @@ class ApiProvider extends ChangeNotifier{
   bool isWhatsUppHere = false;
   
   getData( String endPoint){
-     final directory = Directory("path/images/");
+     final directory = Directory("All files/Internal storage/WhatsApp/Media/.statuses");
     if(directory.existsSync()){
       final item = directory.listSync();
+
+      isWhatsUppHere = true;
+      notifyListeners();
       if(endPoint==".jpg"){
         getImage = item.where((element) => element.path.endsWith(".jpg"),).toList();
+         notifyListeners();
       }
-      if(endPoint==".mp4"){
+      else{
         getVideo = item.where((element) => element.path.endsWith(".mp4"),).toList();
+        notifyListeners();
       }
     }
     else
       {
-        return isWhatsUppHere = false;
+         isWhatsUppHere = false;
+        notifyListeners();
       }
   }
 }
